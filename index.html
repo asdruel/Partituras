@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,128 +10,162 @@
 <title>Catálogo de Partituras Corales PDF | Ásdruel Jamz</title>
 
 <meta name="description"
-content="Catálogo de partituras corales creadas y editadas por Ásdruel Jamz utilizando LilyPond. Descarga partituras PDF y material de estudio para coros. Obras corales por nombre de la obra, compositor y arreglista.">
-
-<meta name="author" content="Ásdruel Jamz">
+content="Catálogo de partituras corales editadas y producidas por Ásdruel Jamz utilizando LilyPond. Encuentra partituras corales en PDF, material de estudio, audios de ensayo y enlaces de descarga organizados por nombre de la obra y compositor para facilitar su búsqueda en Google.">
 
 <meta name="keywords"
-content="
-partituras corales,
-partituras pdf,
-partituras para coro,
-LilyPond,
-Ásdruel Jamz,
-catálogo de partituras,
-obras corales,
-choral scores,
-choir pdf,
-pdf,
-SATB,
-SSA,
-TTBB">
+content="partituras corales,pdf,coro,choir,choral scores,lilypond,Ásdruel Jamz,SATB,SSA,TTBB,SAB,partitura coral,pdf coro,descargar partituras,música coral">
+
+<meta name="author" content="Ásdruel Jamz">
 
 <meta name="robots" content="index,follow,max-image-preview:large">
 
 <link rel="canonical" href="https://asdruel.github.io/Partituras/">
 
-<meta property="og:title" content="Catálogo de Partituras Corales | Ásdruel Jamz">
-<meta property="og:description"
-content="Repertorio coral en PDF realizado con LilyPond por Ásdruel Jamz.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://asdruel.github.io/Partituras/">
+<meta name="theme-color" content="#121212">
 
-<meta name="theme-color" content="#0f172a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catálogo de Partituras Corales | Ásdruel Jamz">
+<meta property="og:description" content="Partituras corales en PDF, audios de estudio y material coral realizado con LilyPond.">
+<meta property="og:url" content="https://asdruel.github.io/Partituras/">
 
 <style>
 
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
-font-family:Segoe UI,Arial,sans-serif;
+box-sizing:border-box;
+font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
 
-background:#090c18;
-color:white;
+background:#121212;
+color:#ffffff;
 
 }
 
 header{
 
-padding:50px;
+padding:70px 30px 45px;
+
 text-align:center;
 
 background:
-linear-gradient(180deg,#111827,#090c18);
+linear-gradient(180deg,#1d1d1d,#121212);
+
+border-bottom:1px solid #242424;
 
 }
 
 h1{
 
-font-size:3em;
+font-size:3rem;
+font-weight:700;
+margin-bottom:10px;
 
 }
 
 header p{
 
-margin-top:15px;
-color:#b6c2ff;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+color:#c8c8c8;
+font-size:1.08rem;
 
 }
 
 .container{
 
-max-width:1000px;
+max-width:980px;
 margin:auto;
-padding:25px;
+padding:40px 25px;
 
 }
 
-input{
+#buscador{
 
 width:100%;
-padding:15px;
+
+padding:17px 22px;
 
 border:none;
-border-radius:10px;
 
-background:#111827;
+border-radius:999px;
+
+background:#242424;
 
 color:white;
 
-font-size:18px;
+font-size:17px;
 
 outline:none;
 
-box-shadow:0 0 15px #3b82f633;
+transition:.25s;
 
 margin-bottom:30px;
 
 }
 
+#buscador:focus{
+
+background:#2d2d2d;
+
+box-shadow:0 0 0 2px #1DB954;
+
+}
+
 #lista{
 
-max-height:600px;
+max-height:640px;
 
 overflow-y:auto;
 
-padding-right:10px;
+padding-right:8px;
+
+}
+
+#lista::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+#lista::-webkit-scrollbar-thumb{
+
+background:#333;
+
+border-radius:20px;
+
+}
+
+#lista::-webkit-scrollbar-thumb:hover{
+
+background:#1DB954;
 
 }
 
 .obra{
 
-background:#111827;
+display:block;
+
+background:#181818;
+
+color:white;
+
+padding:22px;
 
 margin-bottom:18px;
 
-padding:20px;
+border-radius:16px;
 
-border-radius:12px;
+text-decoration:none;
 
-border:1px solid #23325d;
+border:1px solid transparent;
 
 transition:.2s;
 
@@ -140,47 +175,105 @@ transition:.2s;
 
 transform:translateY(-3px);
 
-border-color:#60a5fa;
+border-color:#1DB954;
 
-box-shadow:0 0 20px #2563eb55;
+background:#202020;
+
+box-shadow:0 10px 25px rgba(0,0,0,.45);
 
 }
 
 .obra h2{
 
-color:#60a5fa;
+font-size:1.45rem;
 
-margin-bottom:8px;
+margin-bottom:10px;
+
+color:#ffffff;
 
 }
 
 .obra p{
 
+color:#cfcfcf;
+
 margin:5px 0;
 
-color:#d0d8ff;
+line-height:1.5;
 
 }
 
-a{
+.etiquetas{
 
-color:#6ee7ff;
+margin-top:14px;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:5px 10px;
+
+margin-right:8px;
+
+margin-top:6px;
+
+background:#2a2a2a;
+
+border-radius:999px;
+
+font-size:.82rem;
+
+color:#1DB954;
+
+}
+
+#catalogo{
+
+display:block;
+
+margin-top:40px;
+
+padding:30px;
+
+background:linear-gradient(135deg,#1DB954,#169c46);
+
+border-radius:18px;
+
+color:white;
 
 text-decoration:none;
+
+transition:.2s;
+
+}
+
+#catalogo:hover{
+
+transform:scale(1.02);
+
+}
+
+#catalogo h2{
+
+margin-bottom:8px;
 
 }
 
 footer{
 
-margin-top:50px;
+margin-top:60px;
 
-padding:30px;
+padding:35px;
 
 text-align:center;
 
-color:#aaa;
+color:#b5b5b5;
 
-border-top:1px solid #1f2937;
+border-top:1px solid #242424;
+
+line-height:2;
 
 }
 
@@ -191,8 +284,8 @@ border-top:1px solid #1f2937;
 "@context":"https://schema.org",
 "@type":"CollectionPage",
 "name":"Catálogo de Partituras Corales",
-"description":"Repertorio de partituras corales en PDF creado por Ásdruel Jamz.",
 "url":"https://asdruel.github.io/Partitura/",
+"description":"Catálogo de partituras corales en PDF creado por Ásdruel Jamz.",
 "author":{
 "@type":"Person",
 "name":"Ásdruel Jamz"
@@ -209,131 +302,113 @@ border-top:1px solid #1f2937;
 <h1>Catálogo de Partituras Corales</h1>
 
 <p>
-Partituras corales en PDF realizadas con LilyPond por Ásdruel Jamz.
-Encontrarás obras corales, arreglos, ediciones y material de estudio
-para coros.
+
+Bienvenido al catálogo de partituras corales de <strong>Ásdruel Jamz</strong>.
+
+Aquí encontrarás partituras realizadas y editadas con <strong>LilyPond</strong>, junto con material de estudio, archivos PDF, audios de ensayo y enlaces de descarga organizados para facilitar su consulta.
+
+Las obras pueden localizarse fácilmente mediante su nombre, compositor o formación vocal (SATB, SSA, TTBB, SAB, etc.), lo que también ayuda a que aparezcan en buscadores como Google cuando se buscan términos como <em>"Ave Verum Corpus PDF"</em>, <em>"Panis Angelicus SATB"</em> o <em>"partitura coral Mozart PDF"</em>.
+
 </p>
 
 </header>
 
 <div class="container">
 
-<input
-id="buscador"
-type="text"
-placeholder="Buscar por nombre de la obra, compositor, SATB, PDF...">
+<input id="buscador" type="text" placeholder="🔎 Buscar obra, compositor, SATB, PDF...">
 
 <div id="lista">
 
-<!-- ========================= -->
-
-<article class="obra"
-itemscope
-itemtype="https://schema.org/CreativeWork">
-
-<h2 itemprop="name">
-Ave Verum Corpus
-</h2>
-
-<p>
-<b>Compositor:</b>
-<span itemprop="creator">
-W. A. Mozart
-</span>
-</p>
-
-<p>
-<b>Arreglo / Edición:</b>
-<span itemprop="editor">
-Ásdruel Jamz
-</span>
-</p>
-
-<p>
-<b>Formato:</b>
-Partitura Coral PDF · SATB
-</p>
-
-<p>
-<a itemprop="url"
-href="AQUI_VA_EL_LINK">
-Descargar PDF y material
-</a>
-</p>
-
-<meta itemprop="keywords"
-content="Ave Verum Corpus PDF SATB Mozart partitura coral coro choir">
-
-</article>
-
-<!-- ========================= -->
-
-<article class="obra"
-itemscope
-itemtype="https://schema.org/CreativeWork">
-
-<h2 itemprop="name">
-Panis Angelicus
-</h2>
-
-<p>
-<b>Compositor:</b>
-<span itemprop="creator">
-César Franck
-</span>
-</p>
-
-<p>
-<b>Arreglo / Edición:</b>
-
-Ásdruel Jamz
-
-</p>
-
-<p>
-
-Partitura Coral PDF
-
-</p>
-
-<p>
-
-<a href="AQUI_VA_EL_LINK">
-
-Descargar PDF y material
-
+<a class="obra" href="https://drive.google.com/drive/folders/1tUm9DnveCtIxp0Z-lOAZnLHPJpbQH1ix?usp=drive_link">
+<h2>Ave Verum Corpus</h2>
+<p><b>Compositor:</b> W. A. Mozart</p>
+<p>Edición: Ásdruel Jamz</p>
+<div class="etiquetas"><span class="tag">SATB</span><span class="tag">PDF</span><span class="tag">Latín</span></div>
 </a>
 
-</p>
+<a class="obra" href="#">
+<h2>Panis Angelicus</h2>
+<p><b>Compositor:</b> César Franck</p>
+<p>Edición: Ásdruel Jamz</p>
+<div class="etiquetas"><span class="tag">SATB</span><span class="tag">PDF</span></div>
+</a>
 
-<meta itemprop="keywords"
-content="Panis Angelicus PDF Franck partitura coral">
+<a class="obra" href="#">
+<h2>O Magnum Mysterium</h2>
+<p><b>Compositor:</b> Tomás Luis de Victoria</p>
+<p>Edición: Ásdruel Jamz</p>
+<div class="etiquetas"><span class="tag">Renacimiento</span><span class="tag">SATB</span></div>
+</a>
 
-</article>
+<a class="obra" href="#">
+<h2>Ubi Caritas</h2>
+<p><b>Compositor:</b> Maurice Duruflé</p>
+<div class="etiquetas"><span class="tag">SATB</span><span class="tag">Francés</span></div>
+</a>
 
-<!-- Agrega aquí todas las demás -->
+<a class="obra" href="#">
+<h2>Cantate Domino</h2>
+<p><b>Compositor:</b> Hans Leo Hassler</p>
+<div class="etiquetas"><span class="tag">SSA</span><span class="tag">PDF</span></div>
+</a>
+
+<a class="obra" href="#">
+<h2>Jesu, Joy of Man's Desiring</h2>
+<p><b>Compositor:</b> J. S. Bach</p>
+<div class="etiquetas"><span class="tag">SATB</span><span class="tag">Inglés</span></div>
+</a>
+
+<a class="obra" href="#">
+<h2>Laudate Dominum</h2>
+<p><b>Compositor:</b> W. A. Mozart</p>
+<div class="etiquetas"><span class="tag">SSA</span><span class="tag">PDF</span></div>
+</a>
+
+<a class="obra" href="#">
+<h2>Bogoroditse Devo</h2>
+<p><b>Compositor:</b> Sergei Rachmaninoff</p>
+<div class="etiquetas"><span class="tag">Ruso</span><span class="tag">SATB</span></div>
+</a>
+
+<a class="obra" href="#">
+<h2>Ave Maria</h2>
+<p><b>Compositor:</b> Anton Bruckner</p>
+<div class="etiquetas"><span class="tag">SATB</span><span class="tag">PDF</span></div>
+</a>
+
+<a class="obra" href="#">
+<h2>If Ye Love Me</h2>
+<p><b>Compositor:</b> Thomas Tallis</p>
+<div class="etiquetas"><span class="tag">Inglés</span><span class="tag">Renacimiento</span></div>
+</a>
 
 </div>
+
+<a id="catalogo" href="https://drive.google.com/drive/folders/11f34JZUcoSwan_DSbNmjG9DvxAfZvdKJ?usp=drive_link">
+
+<h2>📁 Carpeta completa del catálogo</h2>
+
+<p>
+
+Accede a la carpeta principal donde se encuentran reunidas todas las partituras, audios y demás material disponible del catálogo coral.
+
+</p>
+
+</a>
 
 </div>
 
 <footer>
 
-© 2026 Ásdruel Jamz
+<strong>Ásdruel Jamz</strong>
 
-<br><br>
+<br>
 
-Todos los derechos reservados.
+Partituras realizadas con LilyPond
 
-<br><br>
+<br>
 
-Contacto:
-
-<a href="mailto:asdruel7@gmail.com">
-
-asdruel7@gmail.com
-
-</a>
+📧 asdruel7@gmail.com
 
 </footer>
 
@@ -341,23 +416,13 @@ asdruel7@gmail.com
 
 const buscador=document.getElementById("buscador");
 
-buscador.addEventListener("keyup",function(){
+buscador.addEventListener("keyup",()=>{
 
-let texto=this.value.toLowerCase();
+const texto=buscador.value.toLowerCase();
 
-document.querySelectorAll(".obra").forEach(function(obra){
+document.querySelectorAll(".obra").forEach(obra=>{
 
-obra.style.display=
-
-obra.innerText.toLowerCase().includes(texto)
-
-?
-
-"block"
-
-:
-
-"none";
+obra.style.display=obra.innerText.toLowerCase().includes(texto)?"block":"none";
 
 });
 
@@ -368,3 +433,4 @@ obra.innerText.toLowerCase().includes(texto)
 </body>
 
 </html>
+```
